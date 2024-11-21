@@ -1,2 +1,137 @@
 # COMP433-Project-Group-E
- All code for COMP 433 project 
+
+
+## Tissue Segmentation in Digital Pathology Preview Images
+
+This project implements deep learning models for automated segmentation of regions of interest (ROIs) in preview images within digital pathology scanning. The goal is to enhance the efficiency and accuracy of tissue analysis by automating the identification of tissue regions in Whole Slide Images (WSIs), leveraging deep learning architectures.
+
+## Overview
+
+By implementing and comparing different deep learning architectures—such as U-Net, U-Net++ with attention mechanisms, EfficientNet, and SegFormer, this project aims to determine the most effective approach for tissue segmentation in preview images, addressing challenges like complex tissue structures, varying image quality, and class imbalance.
+
+## Implementation Details
+
+This builds upon advanced deep learning techniques for medical image segmentation, involving:
+
+- **Data Preprocessing and Augmentation**: Normalization, resizing, and various augmentation techniques to enhance model robustness.
+- **Deep Learning Models**: Implementing and training architectures like U-Net, U-Net++ with SCSE attention, EfficientNet, and SegFormer.
+- **Transfer Learning**: Utilizing pre-trained encoders (e.g., ResNet34, EfficientNet-B4) to improve feature extraction.
+- **Loss Functions and Metrics**: Employing Dice Loss for optimization and Intersection over Union (IoU) for evaluation.
+- **Comparison and Evaluation**: Assessing model performance to identify the most effective architecture.
+
+### Key Components
+
+- **Data Augmentation Techniques**:
+  - **Random Rotations and Flips**: To simulate varied tissue orientations.
+  - **Zooming and Scaling**: To handle different tissue sizes.
+  - **Brightness Adjustment and Gaussian Noise**: To mimic variations in image quality.
+- **Deep Learning Architectures**:
+  - **U-Net**: A CNN with contracting and expanding paths for precise localization.
+  - **U-Net++ with SCSE Attention**: Enhanced U-Net with nested skip connections and attention mechanisms.
+  - **EfficientNet**: Utilizes compound scaling for improved performance with reduced computational cost.
+  - **SegFormer**: Combines a hierarchical Transformer encoder with a lightweight decoder for semantic segmentation.
+- **Optimization**:
+  - **Optimizer**: AdamW with a learning rate of 1e-4.
+  - **Loss Function**: Dice Loss, suitable for handling class imbalance.
+- **Evaluation Metrics**:
+  - **Intersection over Union (IoU)**: Measures overlap between predicted masks and ground truth.
+
+## Data Source
+
+This project utilizes a dataset of 17,375 preview images provided by **Huron Digital Pathology**. Each image is less than 1,000×1,000 pixels and includes a corresponding pixel-level annotated tissue mask (ground truth). The dataset encompasses diverse tissue samples with varying characteristics such as size, shape, texture, and artifacts like pen marks and fading.
+
+### Data Preparation
+
+- **Normalization**: Images are normalized using standard ImageNet statistics.
+- **Resizing**: Images are resized to 256×256 pixels to meet model input requirements and optimize computational efficiency.
+- **Augmentation**: Techniques like rotations, flips, zooming, brightness adjustments, and adding Gaussian noise are applied to enhance dataset diversity and model robustness.
+
+## Getting Started
+
+### Prerequisites
+
+To run this project locally, ensure the following are installed:
+
+- **Python 3.8+**
+- **Jupyter Notebook**
+- **PyTorch**
+- **Torchvision**
+- **Segmentation Models PyTorch (smp)**
+- **Additional Libraries**: `numpy`, `pandas`, `matplotlib`, `scikit-learn`
+
+Install the necessary packages via:
+
+```bash
+pip install torch torchvision
+pip install segmentation-models-pytorch
+pip install numpy pandas matplotlib scikit-learn
+```
+
+### Running the Project
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/nlagarde15/COMP433-GroupE.git
+   cd to be updated.
+   ```
+
+2. **Prepare the Data**:
+
+   - Download the dataset provided by Huron Digital Pathology.
+   - Organize the dataset into `train`, `validation`, and `test` directories, each containing `images` and `masks` subdirectories.
+
+3. **Run the Jupyter Notebook**:
+
+   - Launch Jupyter Notebook:
+
+     ```bash
+     jupyter notebook
+     ```
+
+   - Steps to be updated.
+
+4. **Experiment with Different Models**:
+
+   - Modify the notebook to switch between different architectures and encoders.
+   - Adjust hyperparameters like learning rate, batch size, and number of epochs to improve performance.
+
+## Results
+
+The project evaluates model performance using the Intersection over Union (IoU) metric. Preliminary results include:
+
+- **U-Net with ResNet34 Encoder**:
+  - Achieved an IoU of **91.01%** on the test set after 20 epochs.
+- **U-Net++ with ResNet34 Encoder and SCSE Attention**:
+  - Improved performance with an IoU of **91.32%** after 20 epochs.
+- **EfficientNet-B4 with U-Net++**:
+  - Reached an IoU of **91.28%** after just 5 epochs but required more computational resources.
+- **SegFormer (MIT-B0)**:
+  - Achieved an IoU of **76.50%** after 5 epochs, indicating potential for further tuning.
+
+## Future Steps
+
+- **Hyperparameter Tuning**: Optimize learning rates, batch sizes, and training epochs for better performance.
+- **Advanced Architectures**: Test other models and attention mechanisms to improve accuracy.
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.txt) file for more details.
+
+## Acknowledgments
+
+We would like to thank **Huron Digital Pathology** for providing the dataset and support throughout this project.
+
+## References
+
+- [1] O. Ronneberger, P. Fischer, and T. Brox, "U-Net: Convolutional Networks for Biomedical Image Segmentation," *Medical Image Computing and Computer-Assisted Intervention (MICCAI)*, 2015.
+- [2] Ozan Oktay et al., "Attention U-Net: Learning Where to Look for the Pancreas," arXiv preprint arXiv:1804.03999, 2018.
+- [3] Enze Xie et al., "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers," arXiv preprint arXiv:2105.15203, 2021.
+- [4] Mingxing Tan and Quoc Le, "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks," *International Conference on Machine Learning (ICML)*, 2019.
+- [5] Segmentation Models PyTorch Library, [GitHub Repository](https://github.com/qubvel/segmentation_models.pytorch).
+
+---
+
+By following this README, you can replicate the experiments and contribute to the development of automated tissue segmentation in digital pathology.
+
+ 
