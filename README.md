@@ -120,7 +120,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.tx
 
 ## Acknowledgments
 
-We would like to thank **Huron Digital Pathology** for providing the dataset and support throughout this project.
+To be updated.
 
 ## References
 
