@@ -15,7 +15,7 @@ This builds upon advanced deep learning techniques for medical image segmentatio
 
 - **Data Preprocessing and Augmentation**: Normalization, resizing, and various augmentation techniques to enhance model robustness.
 - **Deep Learning Models**: Implementing and training architectures like U-Net, U-Net++ with SCSE attention, EfficientNet, and SegFormer.
-- **Transfer Learning**: Utilizing pre-trained encoders (e.g., ResNet34, EfficientNet-B4) to improve feature extraction.
+- **Transfer Learning**: Utilizing pre-trained encoders to improve feature extraction.
 - **Loss Functions and Metrics**: Employing Dice Loss for optimization and Intersection over Union (IoU) for evaluation.
 - **Comparison and Evaluation**: Assessing model performance to identify the most effective architecture.
 
