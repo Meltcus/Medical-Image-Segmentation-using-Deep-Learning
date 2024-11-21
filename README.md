@@ -7,7 +7,7 @@ This project implements deep learning models for automated segmentation of regio
 
 ## Overview
 
-By implementing and comparing different deep learning architectures—such as U-Net, U-Net++ with attention mechanisms, EfficientNet, and SegFormer, this project aims to determine the most effective approach for tissue segmentation in preview images, addressing challenges like complex tissue structures, varying image quality, and class imbalance.
+By implementing and comparing different deep learning architectures such as U-Net, U-Net++ with attention mechanisms, EfficientNet, and SegFormer, this project aims to determine the most effective approach for tissue segmentation in preview images, addressing challenges like complex tissue structures, varying image quality, and class imbalance.
 
 ## Implementation Details
 
