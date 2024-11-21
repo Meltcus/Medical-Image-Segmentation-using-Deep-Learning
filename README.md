@@ -130,8 +130,4 @@ We would like to thank **Huron Digital Pathology** for providing the dataset and
 - [4] Mingxing Tan and Quoc Le, "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks," *International Conference on Machine Learning (ICML)*, 2019.
 - [5] Segmentation Models PyTorch Library, [GitHub Repository](https://github.com/qubvel/segmentation_models.pytorch).
 
----
-
-By following this README, you can replicate the experiments and contribute to the development of automated tissue segmentation in digital pathology.
-
  
