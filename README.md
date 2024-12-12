@@ -110,6 +110,7 @@ After optimization and hyperparameter tuning involving different encoders and lo
  
 The trained model can be downloaded from the [Initial Release](https://github.com/nlagarde15/COMP433-GroupE/releases/tag/v1.0.0)
 and tested by running [test_best_model.ipynb](test_best_model).
+The test data with sliced images and slices masks can be download from [test data](https://github.com/nlagarde15/COMP433-GroupE/tree/main/Test%20Dataset)
 
 ## License
 
