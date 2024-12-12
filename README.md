@@ -108,7 +108,8 @@ After optimization and hyperparameter tuning involving different encoders and lo
 - **U-Net++ with EfficientNet-B4 Encoder and Dice + BCE Loss**:
   - Achieved an IoU of **93.38%**, demonstrating a significant improvement over the past results.
  
-The trained model can be downloaded from the [Initial Release](https://github.com/nlagarde15/COMP433-GroupE/releases/tag/v1.0.0).
+The trained model can be downloaded from the [Initial Release](https://github.com/nlagarde15/COMP433-GroupE/releases/tag/v1.0.0)
+and tested by running test_best_model.ipynb.
 
 ## License
 
