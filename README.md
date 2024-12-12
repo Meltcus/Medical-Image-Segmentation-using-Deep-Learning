@@ -99,13 +99,13 @@ pip install numpy pandas matplotlib scikit-learn
 
 Out of the eight architectures initially tested, the following three achieved the highest IoU scores before final refinements:
 
-- **U-Net++**: IoU of 0.9081
-- **U-Net++ with SCSE Attention**: IoU of 0.9068
-- **FPN**: IoU of 0.9054
+- **U-Net++**: IoU of 0.9118
+- **U-Net++ with SCSE Attention**: IoU of 0.9089
+- **FPN**: IoU of 0.9050
 
 After optimization and hyperparameter tuning involving different encoders and loss functions, the best-performing configuration was:
 
-- **U-Net++ with SCSE Attention and EfficientNet-B4 Encoder**:
+- **U-Net++ with EfficientNet-B4 Encoder and Dice + BCE Loss**:
   - Achieved an IoU of **93.38%**, demonstrating a significant improvement over the past results.
  
 The trained model can be downloaded from the [Initial Release](https://github.com/nlagarde15/COMP433-GroupE/releases/tag/v1.0.0).
