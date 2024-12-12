@@ -37,7 +37,7 @@ This builds upon advanced deep learning techniques for medical image segmentatio
 
 ## Data Source
 
-This project utilizes a dataset of 17,375 preview images provided by **Huron Digital Pathology**. Each image is less than 1,000×1,000 pixels and includes a corresponding pixel-level annotated tissue mask (ground truth). The dataset encompasses diverse tissue samples with varying characteristics such as size, shape, texture, and artifacts like pen marks and fading.
+This project utilizes a dataset of 17,375 preview images provided by **Huron Digital Pathology**. Each image is 512×512 pixels and includes a corresponding pixel-level annotated tissue mask (ground truth). The dataset encompasses diverse tissue samples with varying characteristics such as size, shape, texture, and artifacts like pen marks and fading.
 
 ### Data Preparation
 
